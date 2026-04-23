@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Mirah Wood's - Supplier Kayu Bangunan Manado</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --primary-light: #d1fae5;
+            --secondary: #92400e;
+            --accent: #f59e0b;
+            --danger: #dc2626;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo { font-size: 1.8rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
+        .logo i { color: var(--accent); }
+        .nav-contact { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .admin-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+        .admin-badge:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+        .admin-badge a { color: white; text-decoration: none; font-weight: 600; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #064e3b 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -10%;
+            width: 600px; height: 600px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; position: relative; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
+        .hero-badge { display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Section */
+        .section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #e5e7eb;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+        }
+        .section-title i { color: var(--accent); }
+
+        /* Promo */
+        .promo-banner {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid var(--danger);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #991b1b;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        .promo-banner i { font-size: 1.5rem; color: var(--danger); }
+
+        /* VIP Banner */
+        .vip-banner {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .vip-text h3 { color: var(--secondary); font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .vip-text p { color: #92400e; font-size: 0.95rem; }
+        .vip-btn {
+            background: var(--secondary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .vip-btn:hover { transform: translateY(-2px); }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; }
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e5e7eb;
+            position: relative;
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .product-image { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .product-badge {
+            position: absolute;
+            top: 12px; right: 12px;
+            background: var(--accent);
+            color: white;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 10;
+        }
+        .product-badge.premium { background: var(--danger); }
+        .product-badge.local { background: var(--primary); }
+        .product-body { padding: 1.5rem; }
+        .product-name { font-size: 1.3rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .product-emoji { font-size: 1.5rem; }
+        .product-desc { color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5; }
+
+        /* Size Selector */
+        .size-selector { margin-bottom: 1rem; }
+        .size-selector label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--dark); font-size: 0.9rem; }
+        .size-options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .size-btn {
+            border: 2px solid #e5e7eb;
+            background: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            text-align: center;
+            min-width: 80px;
+        }
+        .size-btn:hover { border-color: var(--primary); background: var(--primary-light); }
+        .size-btn.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        .size-btn .size-name { display: block; font-weight: 600; }
+        .size-btn .size-price { display: block; font-size: 0.75rem; opacity: 0.9; margin-top: 2px; }
+
+        /* Price Display */
+        .price-display {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #ecfdf5 100%);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+        .price-display .label { font-size: 0.85rem; color: #6b7280; }
+        .price-display .value { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .price-display .detail { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+
+        .qty-selector { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .qty-selector label { font-weight: 600; font-size: 0.9rem; }
+        .qty-selector input {
+            width: 80px;
+            padding: 0.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .product-actions { display: flex; gap: 0.75rem; }
+        .btn {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background: var(--primary-light); }
+
+        /* Guide Section */
+        .guide-section { background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid var(--primary); }
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .guide-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+        .guide-card h4 { color: var(--primary-dark); font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .guide-card ul { list-style: none; padding: 0; }
+        .guide-card li { padding: 0.4rem 0; color: #4b5563; font-size: 0.9rem; display: flex; align-items: start; gap: 0.5rem; }
+        .guide-card li::before { content: '✓'; color: var(--primary); font-weight: bold; }
+        .tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            margin-right: 0.25rem;
+        }
+
+        /* Shipping */
+        .shipping-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .shipping-card {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+        .shipping-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+        .shipping-card h4 { color: var(--primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .shipping-card .price { font-size: 1.3rem; font-weight: 800; color: var(--dark); }
+        .shipping-card .note { font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem; line-height: 1.5; }
+        .shipping-card .minimum { background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-top: 0.5rem; }
+
+        /* Payment */
+        .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .payment-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .payment-card.active { border-color: var(--primary); background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); }
+        .payment-card.maintenance { opacity: 0.6; border-style: dashed; }
+        .payment-logo { font-size: 2.5rem; margin-bottom: 0.75rem; }
+        .payment-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .payment-number { font-family: 'Courier New', monospace; font-size: 1.2rem; font-weight: 700; color: var(--primary); letter-spacing: 1px; }
+        .payment-owner { color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; }
+        .payment-status { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-top: 0.75rem; }
+        .status-active { background: var(--primary-light); color: var(--primary-dark); }
+        .status-maintenance { background: #fee2e2; color: #991b1b; }
+
+        /* COD Badge */
+        .cod-badge {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .cod-badge h4 { color: #1e40af; margin-bottom: 0.5rem; }
+        .cod-badge p { color: #3b82f6; font-size: 0.9rem; }
+
+        /* Checkout Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+        .modal {
+            background: white;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 650px;
+            max-height: 95vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            margin: 1rem 0;
+        }
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .modal-body { padding: 1.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark); }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus { outline: none; border-color: var(--primary); }
+
+        .shipping-options { display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0; }
+        .shipping-option {
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shipping-option:hover,
+        .shipping-option.active { border-color: var(--primary); background: var(--primary-light); }
+        .shipping-option-info h5 { margin-bottom: 0.25rem; font-size: 1rem; }
+        .shipping-option-info p { font-size: 0.85rem; color: #6b7280; }
+        .shipping-price { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+
+        .payment-method-options { display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0; }
+        .payment-method-option {
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .payment-method-option:hover,
+        .payment-method-option.active { border-color: var(--primary); background: var(--primary-light); }
+        .payment-method-option .method-info h5 { margin-bottom: 0.25rem; }
+        .payment-method-option .method-info p { font-size: 0.85rem; color: #6b7280; }
+
+        .total-section {
+            background: #f9fafb;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: 2px solid #e5e7eb;
+        }
+        .total-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .total-row.discount { color: var(--danger); }
+        .total-row.dp { color: #3b82f6; font-weight: 600; }
+        .total-row.final { font-size: 1.3rem; font-weight: 800; color: var(--primary); border-top: 2px solid #e5e7eb; padding-top: 0.75rem; margin-top: 0.5rem; }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 3rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .footer-section h3 { margin-bottom: 1rem; color: var(--accent); }
+        .footer-section a { color: #d1d5db; text-decoration: none; display: block; padding: 0.25rem 0; transition: color 0.2s; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { max-width: 1200px; margin: 2rem auto 0; padding-top: 2rem; border-top: 1px solid #374151; text-align: center; color: #9ca3af; }
+
+        /* Steps */
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .step-card { text-align: center; padding: 1.5rem; background: white; border-radius: 12px; box-shadow: var(--shadow); transition: transform 0.3s; }
+        .step-card:hover { transform: translateY(-5px); }
+        .step-icon { width: 70px; height: 70px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.8rem; color: var(--primary); }
+        .step-card h4 { margin-bottom: 0.5rem; color: var(--dark); }
+        .step-card p { color: #6b7280; font-size: 0.9rem; }
+
+        /* H3 Notice */
+        .h3-notice {
+            background: #fef3c7;
+            border: 1px solid var(--accent);
+            color: #92400e;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* First Order Banner */
+        .first-order-banner {
+            background: linear-gradient(135deg, var(--danger) 0%, #b91c1c 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .header-content { flex-direction: column; gap: 1rem; }
+            .product-grid { grid-template-columns: 1fr; }
+            .vip-banner { flex-direction: column; text-align: center; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-container:hover .marquee-text {
+            animation-play-state: paused;
+        }
+        .section { animation: fadeIn 0.6s ease-out; }
+
+        /* Ensure modal content is clickable on mobile */
+        .modal { position: relative; z-index: 2001; }
+        .modal-overlay { display: flex; align-items: center; justify-content: center; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-tree"></i>
+                Mirah Wood's
+            </div>
+            <div class="nav-contact">
+                <div class="admin-badge">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/6285708081999">Admin 1: +62 857-0808-1999</a>
+                </div>
+                <div class="admin-badge">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/6285656065418">Admin 2: +62 856-5606-5418</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Kayu Bangunan Berkualitas</h1>
+        <p>Pesan kayu bangunan terbaik dari Manado & sekitarnya. Pilih ukuran & harga sesuai kebutuhan.</p>
+        <div class="hero-badge">
+            <span class="badge"><i class="fas fa-check-circle"></i> Kayu Legal</span>
+            <span class="badge"><i class="fas fa-truck"></i> COD Tersedia</span>
+            <span class="badge"><i class="fas fa-percentage"></i> Diskon 10% Pesanan Pertama</span>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- Running Text Promo -->
+        <div style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: white; padding: 0.75rem 0; overflow: hidden; margin-bottom: 2rem; border-radius: 12px;">
+            <div class="marquee-container" style="overflow: hidden; white-space: nowrap;">
+                <div class="marquee-text" style="display: inline-block; animation: marquee 20s linear infinite; font-weight: 700; font-size: 1rem;">
+                    🎉 DISKON 10% UNTUK PEMESANAN PERTAMA KALI &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🚚 SEWA PICKUP & TRUCK MANADO & SEKITAR &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🪵 KAYU LOKAL SULUT TERBAIK &nbsp;&nbsp;&bull;&nbsp;&nbsp; 📞 HUBUNGI ADMIN 0857-0808-1999 &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🚢 CHARTER KAPAL LUAR SULAWESI &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🎉 DISKON 10% UNTUK PEMESANAN PERTAMA KALI &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🚚 SEWA PICKUP & TRUCK MANADO & SEKITAR &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🪵 KAYU LOKAL SULUT TERBAIK &nbsp;&nbsp;&bull;&nbsp;&nbsp; 📞 HUBUNGI ADMIN 0857-0808-1999 &nbsp;&nbsp;&bull;&nbsp;&nbsp; 🚢 CHARTER KAPAL LUAR SULAWESI &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+
+        <!-- VIP Banner -->
+        <div class="vip-banner">
+            <div class="vip-text">
+                <h3><i class="fas fa-crown"></i> VIP Member</h3>
+                <p>Potongan ongkir 10-15% untuk area Manado & sekitar. Diskon produk eksklusif.</p>
+            </div>
+            <a href="https://wa.me/6285708081999?text=Halo%20Mirah%20Wood's,%20saya%20ingin%20join%20VIP%20Member" class="vip-btn">
+                Daftar VIP <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- Panduan Kegunaan Kayu -->
+        <section class="section guide-section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                Panduan Kegunaan & Peruntukan Kayu
+            </h2>
+            <p style="color: #4b5563; margin-bottom: 1rem;">
+                Pilih kayu sesuai kebutuhan proyek Anda. Lihat rekomendasi penggunaan optimal.
+            </p>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <h4>🪵 Kayu Meranti</h4>
+                    <ul>
+                        <li>Reng atap (2x3x4m)</li>
+                        <li>Usuk atap (3x4x4m)</li>
+                        <li>Kaso / rangka atap (4x6x4m)</li>
+                        <li>Struktur sedang (5x7x4m)</li>
+                        <li>Bekisting / dinding (2x20x4m, 3x20x4m)</li>
+                    </ul>
+                    <span class="tag">Serbaguna bangunan</span>
+                    <span class="tag">Harga ekonomis</span>
+                </div>
+                <div class="guide-card">
+                    <h4>🌲 Kayu Kamper</h4>
+                    <ul>
+                        <li>Usuk kuat (3x4x4m)</li>
+                        <li>Rangka atap kuat (4x6x4m)</li>
+                        <li>Struktur rumah (5x7x4m)</li>
+                        <li>Balok penyangga (5x10x4m)</li>
+                        <li>Kusen & rangka jendela</li>
+                    </ul>
+                    <span class="tag">Wangi alami</span>
+                    <span class="tag">Anti rayap</span>
+                </div>
+                <div class="guide-card">
+                    <h4>🌿 Kayu Sengon / Albasia</h4>
+                    <ul>
+                        <li>Reng murah (2x3x4m)</li>
+                        <li>Usuk ringan (3x4x4m)</li>
+                        <li>Rangka ringan (4x6x4m)</li>
+                        <li>Peti / packing (papan tipis)</li>
+                        <li>Proyek budget terbatas</li>
+                    </ul>
+                    <span class="tag">Ringan & murah</span>
+                    <span class="tag">Cepat dipasang</span>
+                </div>
+                <div class="guide-card">
+                    <h4>🌴 Kayu Kelapa (Lokal Sulut)</h4>
+                    <ul>
+                        <li>Rangka rumah sederhana (4x6x4m)</li>
+                        <li>Struktur tahan air (5x7x4m)</li>
+                        <li>Gazebo & pagar outdoor</li>
+                        <li>Dekorasi rustic</li>
+                    </ul>
+                    <span class="tag">Lokal Sulawesi Utara</span>
+                    <span class="tag">Tahan cuaca</span>
+                </div>
+                <div class="guide-card">
+                    <h4>🪑 Kayu Mahoni</h4>
+                    <ul>
+                        <li>Lemari & meja (3x20x4m)</li>
+                        <li>Furniture premium (4x20x4m)</li>
+                        <li>Interior rumah mewah</li>
+                        <li>Pintu panel ukir</li>
+                    </ul>
+                    <span class="tag">Serat halus</span>
+                    <span class="tag">Finishing mewah</span>
+                </div>
+                <div class="guide-card">
+                    <h4>👑 Kayu Jati (Premium)</h4>
+                    <ul>
+                        <li>Meja & pintu (3x20x4m)</li>
+                        <li>Furniture premium (4x20x4m)</li>
+                        <li>Kusen jendela mewah</li>
+                        <li>Lantai parket eksklusif</li>
+                    </ul>
+                    <span class="tag">Tahan rayap >50 th</span>
+                    <span class="tag">Investasi jangka panjang</span>
+                </div>
+                <div class="guide-card">
+                    <h4>🌳 Kayu Merbau (Kuat)</h4>
+                    <ul>
+                        <li>Rangka kuat (4x6x4m)</li>
+                        <li>Balok berat (5x10x4m)</li>
+                        <li>Lantai outdoor & deking</li>
+                        <li>Dermaga & jembatan kecil</li>
+                    </ul>
+                    <span class="tag">Kekuatan ekstrim</span>
+                    <span class="tag">Tahan air & rayap</span>
+                </div>
+                <div class="guide-card">
+                    <h4>🪵 Kayu Ulin (Kayu Besi)</h4>
+                    <ul>
+                        <li>Tiang penyangga (5x10x4m)</li>
+                        <li>Struktur berat (6x12x4m)</li>
+                        <li>Jembatan & dermaga</li>
+                        <li>Konstruksi marine</li>
+                    </ul>
+                    <span class="tag">Kelas kekerasan ekstrim</span>
+                    <span class="tag">Umur >100 tahun</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-box-open"></i>
+                Katalog Kayu Bangunan - Pilih Ukuran & Harga
+            </h2>
+            <p style="color: #4b5563; margin-bottom: 1.5rem;">
+                <i class="fas fa-hand-pointer"></i> <strong>Klik ukuran</strong> di bawah untuk melihat harga spesifik. Harga menyesuaikan dengan jenis kayu dan ukuran yang dipilih.
+            </p>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Shipping Info -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-truck-loading"></i>
+                Metode Pengiriman - Sewa Harian
+            </h2>
+            <p style="color: #4b5563; margin-bottom: 1.5rem;">
+                Pilih metode pengiriman sesuai kebutuhan. Harga sewa harian sudah include driver, BBM & operasional.
+            </p>
+
+            <div class="shipping-grid">
+                <div class="shipping-card" style="border: 2px solid var(--primary); position: relative;">
+                    <div style="position: absolute; top: -12px; left: 20px; background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">PALING MURAH</div>
+                    <h4><i class="fas fa-truck-pickup"></i> Mobil Pickup</h4>
+                    <div style="background: linear-gradient(135deg, var(--primary-light) 0%, #ecfdf5 100%); padding: 1rem; border-radius: 10px; margin: 0.75rem 0; text-align: center; border: 2px solid var(--primary);">
+                        <div style="font-size: 0.85rem; color: #6b7280;">Sewa Harian</div>
+                        <div style="font-size: 1.8rem; font-weight: 800; color: var(--primary);">Rp 350.000</div>
+                        <div style="font-size: 0.85rem; color: #6b7280;">/ hari</div>
+                    </div>
+                    <div class="note">
+                        <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Manado & sekitar<br>
+                        <i class="fas fa-box" style="color: var(--primary);"></i> Kapasitas: 1-3 m³<br>
+                        <i class="fas fa-user" style="color: var(--primary);"></i> Include: Driver + BBM<br>
+                        <i class="fas fa-clock" style="color: var(--primary);"></i> Estimasi: Same day - 1 hari
+                    </div>
+                    <span class="minimum">MIN. PEMBELIAN 1 m³</span>
+                </div>
+
+                <div class="shipping-card" style="border: 2px solid #3b82f6;">
+                    <h4><i class="fas fa-truck-moving"></i> Truck Engkel</h4>
+                    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 1rem; border-radius: 10px; margin: 0.75rem 0; text-align: center; border: 2px solid #3b82f6;">
+                        <div style="font-size: 0.85rem; color: #6b7280;">Sewa Harian</div>
+                        <div style="font-size: 1.8rem; font-weight: 800; color: #1e40af;">Rp 750.000</div>
+                        <div style="font-size: 0.85rem; color: #6b7280;">/ hari</div>
+                    </div>
+                    <div class="note">
+                        <i class="fas fa-map-marker-alt" style="color: #3b82f6;"></i> Manado & sekitar<br>
+                        <i class="fas fa-box" style="color: #3b82f6;"></i> Kapasitas: 3-8 m³<br>
+                        <i class="fas fa-user" style="color: #3b82f6;"></i> Include: Driver + BBM<br>
+                        <i class="fas fa-clock" style="color: #3b82f6;"></i> Estimasi: Same day - 1 hari
+                    </div>
+                    <span class="minimum">MIN. PEMBELIAN 1 m³</span>
+                </div>
+
+                <div class="shipping-card" style="border: 2px solid #7c3aed;">
+                    <h4><i class="fas fa-ship"></i> Charter Kapal</h4>
+                    <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); padding: 1rem; border-radius: 10px; margin: 0.75rem 0; text-align: center; border: 2px solid #7c3aed;">
+                        <div style="font-size: 0.85rem; color: #6b7280;">Sewa Harian</div>
+                        <div style="font-size: 1.8rem; font-weight: 800; color: #5b21b6;">Rp 2.500.000</div>
+                        <div style="font-size: 0.85rem; color: #6b7280;">/ hari</div>
+                    </div>
+                    <div class="note">
+                        <i class="fas fa-map-marker-alt" style="color: #7c3aed;"></i> Luar Sulawesi<br>
+                        <i class="fas fa-box" style="color: #7c3aed;"></i> Kapasitas: Unlimited<br>
+                        <i class="fas fa-user" style="color: #7c3aed;"></i> Include: Crew + Operasional<br>
+                        <i class="fas fa-clock" style="color: #7c3aed;"></i> Estimasi: 5-15 hari
+                    </div>
+                    <span class="minimum">MIN. PEMBELIAN 1 m³</span>
+                </div>
+
+                <div class="shipping-card" style="border: 2px solid #10b981; position: relative;">
+                    <div style="position: absolute; top: -12px; left: 20px; background: #10b981; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">GRATIS</div>
+                    <h4><i class="fas fa-walking"></i> Self Pickup</h4>
+                    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 1rem; border-radius: 10px; margin: 0.75rem 0; text-align: center; border: 2px solid #10b981;">
+                        <div style="font-size: 0.85rem; color: #6b7280;">Ambil Sendiri</div>
+                        <div style="font-size: 1.8rem; font-weight: 800; color: #047857;">Rp 0</div>
+                        <div style="font-size: 0.85rem; color: #6b7280;">Gratis</div>
+                    </div>
+                    <div class="note">
+                        <i class="fas fa-map-marker-alt" style="color: #10b981;"></i> Lokasi: Manado<br>
+                        <i class="fas fa-clock" style="color: #10b981;"></i> Jam: Senin-Sabtu 08.00-17.00<br>
+                        <i class="fas fa-info-circle" style="color: #10b981;"></i> Hubungi admin untuk alamat<br>
+                        <i class="fas fa-check" style="color: #10b981;"></i> Tanpa biaya pengiriman
+                    </div>
+                </div>
+            </div>
+
+            <div class="cod-badge">
+                <h4><i class="fas fa-hand-holding-usd"></i> COD (Cash on Delivery) Tersedia</h4>
+                <p>Bayar di tempat saat kayu sampai! <strong>DP 50%</strong> wajib ditransfer saat pemesanan.<br>
+                Sisa 50% dibayar saat barang diterima. Berlaku untuk area Manado & sekitar.</p>
+            </div>
+        </section>
+
+        <!-- Payment Info -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-credit-card"></i>
+                Pembayaran
+            </h2>
+            <div class="payment-grid">
+                <div class="payment-card active">
+                    <div class="payment-logo"><i class="fas fa-university" style="color: #003399;"></i></div>
+                    <div class="payment-name">Bank BCA</div>
+                    <div class="payment-number">7800435531</div>
+                    <div class="payment-owner">a/n Randi Mirah</div>
+                    <span class="payment-status status-active">AKTIF</span>
+                </div>
+                <div class="payment-card maintenance">
+                    <div class="payment-logo"><i class="fas fa-university" style="color: #0066cc;"></i></div>
+                    <div class="payment-name">Bank BNI</div>
+                    <div class="payment-number">---</div>
+                    <div class="payment-owner">Maintenance</div>
+                    <span class="payment-status status-maintenance">MAINTENANCE</span>
+                </div>
+                <div class="payment-card maintenance">
+                    <div class="payment-logo"><i class="fas fa-university" style="color: #ffd700;"></i></div>
+                    <div class="payment-name">Bank Mandiri</div>
+                    <div class="payment-number">---</div>
+                    <div class="payment-owner">Maintenance</div>
+                    <span class="payment-status status-maintenance">MAINTENANCE</span>
+                </div>
+                <div class="payment-card active" style="border-color: #3b82f6; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+                    <div class="payment-logo"><i class="fas fa-hand-holding-usd" style="color: #3b82f6;"></i></div>
+                    <div class="payment-name">COD (Bayar Ditempat)</div>
+                    <div class="payment-number">DP 50%</div>
+                    <div class="payment-owner">Sisa saat terima barang</div>
+                    <span class="payment-status status-active">TERSEDIA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Order -->
+        <section class="section">
+            <h2 class="section-title">
+                <i class="fas fa-clipboard-list"></i>
+                Cara Pemesanan
+            </h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-mouse-pointer"></i></div>
+                    <h4>1. Pilih Produk</h4>
+                    <p>Klik jenis kayu, pilih ukuran, tentukan jumlah</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-calculator"></i></div>
+                    <h4>2. Cek Harga</h4>
+                    <p>Harga otomatis menyesuaikan ukuran & jenis kayu</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4>3. Chat Admin</h4>
+                    <p>Konfirmasi stok & pilih metode pembayaran</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h4>4. Bayar / COD</h4>
+                    <p>Transfer full, DP 50%, atau COD (DP 50%)</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-tree"></i> Mirah Wood's</h3>
+                <p style="color: #9ca3af; margin-top: 0.5rem;">Supplier kayu bangunan terpercaya di Manado & Sulawesi Utara.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak Admin</h3>
+                <a href="https://wa.me/6285708081999"><i class="fab fa-whatsapp"></i> Admin 1: +62 857-0808-1999</a>
+                <a href="https://wa.me/6285656065418"><i class="fab fa-whatsapp"></i> Admin 2: +62 856-5606-5418</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Manado, Sulawesi Utara</a>
+            </div>
+            <div class="footer-section">
+                <h3>Layanan</h3>
+                <a href="#">Kayu Jati & Wakan Premium</a>
+                <a href="#">Kayu Meranti & Kamper</a>
+                <a href="#">Kayu Lokal Sulut</a>
+                <a href="#">COD & Cargo Ekspedisi</a>
+            </div>
+            <div class="footer-section">
+                <h3>Jam Operasional</h3>
+                <a href="#"><i class="far fa-clock"></i> Senin - Sabtu: 08.00 - 17.00</a>
+                <a href="#" style="color: #ef4444;"><i class="fas fa-times-circle"></i> Minggu: LIBUR</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> Mirah Wood's - Kayu Bangunan Manado. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-shopping-cart"></i> Checkout Pesanan</h3>
+                <button onclick="closeCheckout()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="form-group">
+                    <label>Produk</label>
+                    <input type="text" id="productName" readonly style="background: #f3f4f6; font-weight: 700;">
+                </div>
+
+                <div class="form-group">
+                    <label>Ukuran Terpilih</label>
+                    <input type="text" id="selectedSize" readonly style="background: #f3f4f6; color: var(--primary); font-weight: 700;">
+                </div>
+
+                <div class="form-group">
+                    <label>Jumlah (batang)</label>
+                    <input type="number" id="quantity" value="10" min="1" oninput="calculateTotal()">
+                    <small style="color: #6b7280;">Minimal pembelian bervariasi per jenis kayu</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="customerName" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label>Nomor WhatsApp</label>
+                    <input type="tel" id="customerPhone" placeholder="Contoh: 08123456789">
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat Pengiriman Lengkap</label>
+                    <textarea id="customerAddress" rows="3" placeholder="Alamat lengkap + kecamatan + kode pos"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pengiriman</label>
+                    <div class="shipping-options">
+                        <div class="shipping-option active" onclick="selectShipping(this, 'selfpickup', 0)">
+                            <div class="shipping-option-info">
+                                <h5><i class="fas fa-walking"></i> Self Pickup</h5>
+                                <p>Ambil sendiri di lokasi Manado</p>
+                            </div>
+                            <div class="shipping-price" style="color: #10b981;">GRATIS</div>
+                        </div>
+                        <div class="shipping-option" onclick="selectShipping(this, 'pickup', 350000)">
+                            <div class="shipping-option-info">
+                                <h5><i class="fas fa-truck-pickup"></i> Mobil Pickup</h5>
+                                <p>Manado & sekitar | Include driver + BBM</p>
+                            </div>
+                            <div class="shipping-price">Rp 350.000</div>
+                        </div>
+                        <div class="shipping-option" onclick="selectShipping(this, 'truck', 750000)">
+                            <div class="shipping-option-info">
+                                <h5><i class="fas fa-truck-moving"></i> Truck Engkel</h5>
+                                <p>Manado & sekitar | Include driver + BBM</p>
+                            </div>
+                            <div class="shipping-price">Rp 750.000</div>
+                        </div>
+                        <div class="shipping-option" onclick="selectShipping(this, 'kapal', 2500000)">
+                            <div class="shipping-option-info">
+                                <h5><i class="fas fa-ship"></i> Charter Kapal</h5>
+                                <p>Luar Sulawesi | Include crew + operasional</p>
+                            </div>
+                            <div class="shipping-price">Rp 2.500.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <div class="payment-method-options">
+                        <div class="payment-method-option active" onclick="selectPayment(this, 'transfer')">
+                            <div class="method-info">
+                                <h5><i class="fas fa-university"></i> Transfer Bank BCA</h5>
+                                <p>7800435531 a/n Randi Mirah | Bayar penuh</p>
+                            </div>
+                        </div>
+                        <div class="payment-method-option" onclick="selectPayment(this, 'cod')">
+                            <div class="method-info">
+                                <h5><i class="fas fa-hand-holding-usd"></i> COD (Bayar Ditempat)</h5>
+                                <p>DP 50% transfer dulu, sisa 50% saat terima barang</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="total-section">
+                    <div class="total-row">
+                        <span>Harga Produk:</span>
+                        <span id="productTotal">Rp 0</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Biaya Pengiriman:</span>
+                        <span id="shippingTotal">Rp 0</span>
+                    </div>
+                    <div class="total-row final">
+                        <span>Total Bayar:</span>
+                        <span id="grandTotal">Rp 0</span>
+                    </div>
+                    <div class="total-row dp" id="dpRow" style="display: none;">
+                        <span>DP 50% (COD):</span>
+                        <span id="dpAmount">Rp 0</span>
+                    </div>
+                    <div class="total-row dp" id="codBalanceRow" style="display: none;">
+                        <span>Sisa bayar saat terima:</span>
+                        <span id="codBalance">Rp 0</span>
+                    </div>
+                </div>
+
+                <div style="background: #f0fdf4; padding: 1rem; border-radius: 8px; margin-top: 1rem; border: 1px solid var(--primary);" id="transferInfo">
+                    <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">
+                        <i class="fas fa-university"></i> Transfer ke:
+                    </div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: 700;">BCA 7800435531</div>
+                    <div style="color: #6b7280; font-size: 0.9rem;">a/n Randi Mirah</div>
+                </div>
+
+                <a id="waDirectLink" href="https://api.whatsapp.com/send?phone=6285708081999&text=Halo%20Mirah%20Wood's%2C%20saya%20ingin%20memesan%20kayu." target="_blank" onclick="return submitOrder();" style="display: block; margin-top: 1rem; padding: 16px; background-color: #059669; color: white; border-radius: 10px; font-weight: bold; font-size: 16px; text-align: center; text-decoration: none;">
+                    <i class="fab fa-whatsapp"></i> Konfirmasi via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Data produk lengkap dengan density (berat jenis) untuk perhitungan ongkir per kg
+        const products = [
+            {
+                id: 'meranti',
+                emoji: '🪵',
+                name: 'Kayu Meranti',
+                desc: 'Kayu meranti / seraya. Serbaguna untuk konstruksi bangunan dengan harga ekonomis.',
+                image: 'https://s.alicdn.com/@sc04/kf/Ad8ec64b028b04236a0e836a7568cf76d9/Malaysia-Tropical-Hardwood-Red-Meranti-Sawn-Timber-with-Raw-Material-for-Construction.jpg',
+                badge: 'POPULER',
+                density: 500, // kg/m3
+                sizes: [
+                    { name: '2x3x4m', price: 18000, isi: 416, kegunaan: 'Reng atap' },
+                    { name: '3x4x4m', price: 24000, isi: 208, kegunaan: 'Usuk atap' },
+                    { name: '4x6x4m', price: 67200, isi: 104, kegunaan: 'Kaso / rangka atap' },
+                    { name: '5x7x4m', price: 78000, isi: 72, kegunaan: 'Struktur sedang' },
+                    { name: '2x20x4m', price: 162000, isi: 62, kegunaan: 'Bekisting / dinding' },
+                    { name: '3x20x4m', price: 240000, isi: 42, kegunaan: 'Dinding' }
+                ],
+                priceM3: { min: 3600000, max: 8400000 }
+            },
+            {
+                id: 'kamper',
+                emoji: '🌲',
+                name: 'Kayu Kamper',
+                desc: 'Wangi alami, anti serangga. Sempurna untuk interior rumah dan kusen jendela.',
+                image: 'https://www.kiosparquet-jakarta.com/wp-content/uploads/2022/10/Kayu-Kamper-3.jpg',
+                badge: '',
+                density: 550,
+                sizes: [
+                    { name: '3x4x4m', price: 28800, isi: 208, kegunaan: 'Usuk kuat' },
+                    { name: '4x6x4m', price: 78000, isi: 104, kegunaan: 'Rangka atap kuat' },
+                    { name: '5x7x4m', price: 108000, isi: 72, kegunaan: 'Struktur' },
+                    { name: '5x10x4m', price: 192000, isi: 50, kegunaan: 'Balok' }
+                ],
+                priceM3: { min: 4800000, max: 9600000 }
+            },
+            {
+                id: 'sengon',
+                emoji: '🌿',
+                name: 'Kayu Sengon (Albasia)',
+                desc: 'Kayu ringan dan ekonomis. Ideal untuk proyek dengan budget terbatas.',
+                image: 'https://courtina.id/ot/wp-content/uploads/2020/11/kayu-albasia-1.jpg',
+                badge: 'MURAH',
+                density: 280,
+                sizes: [
+                    { name: '2x3x4m', price: 12000, isi: 416, kegunaan: 'Reng murah' },
+                    { name: '3x4x4m', price: 16800, isi: 208, kegunaan: 'Usuk ringan' },
+                    { name: '4x6x4m', price: 36000, isi: 104, kegunaan: 'Rangka ringan' },
+                    { name: 'Papan tipis', price: 13200, isi: null, kegunaan: 'Peti / packing' }
+                ],
+                priceM3: { min: 960000, max: 1800000 }
+            },
+            {
+                id: 'kelapa',
+                emoji: '🌴',
+                name: 'Kayu Kelapa (Lokal Sulut)',
+                desc: 'Kayu kelapa lokal Sulawesi Utara. Tahan cuaca dan air, cocok untuk outdoor.',
+                image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=400&h=300&fit=crop',
+                badge: 'LOKAL SULUT',
+                density: 800,
+                sizes: [
+                    { name: '4x6x4m', price: 54000, isi: 104, kegunaan: 'Rangka rumah' },
+                    { name: '5x7x4m', price: 90000, isi: 72, kegunaan: 'Struktur' }
+                ],
+                priceM3: { min: 2400000, max: 4800000 }
+            },
+            {
+                id: 'mahoni',
+                emoji: '🪑',
+                name: 'Kayu Mahoni (Furniture)',
+                desc: 'Serat halus dan mudah dibentuk. Ideal untuk furniture premium dan interior mewah.',
+                image: 'https://i0.wp.com/www.wisanka.com/indonesia-furniture/wp-content/uploads/2019/09/solid-mahogany-wood-for-furniture-indoor.jpg?resize=711%2C400&ssl=1',
+                badge: '',
+                density: 550,
+                sizes: [
+                    { name: '3x20x4m', price: 270000, isi: 42, kegunaan: 'Lemari / meja' },
+                    { name: '4x20x4m', price: 360000, isi: 31, kegunaan: 'Furniture' }
+                ],
+                priceM3: { min: 4800000, max: 8400000 }
+            },
+            {
+                id: 'jati',
+                emoji: '👑',
+                name: 'Kayu Jati (Premium)',
+                desc: 'Kayu jati pilihan, tahan rayap dan cuaca ekstrem. Ideal untuk furnitur mewah.',
+                image: 'https://www.shutterstock.com/image-photo/top-view-cabinet-teak-wood-260nw-2673583095.jpg',
+                badge: 'PREMIUM',
+                density: 700,
+                h3: true,
+                sizes: [
+                    { name: '3x20x4m', price: 480000, isi: 42, kegunaan: 'Meja / pintu' },
+                    { name: '4x20x4m', price: 660000, isi: 31, kegunaan: 'Furniture premium' }
+                ],
+                priceM3: { min: 9600000, max: 18000000 }
+            },
+            {
+                id: 'merbau',
+                emoji: '🌳',
+                name: 'Kayu Merbau (Kuat)',
+                desc: 'Kekuatan ekstrim, tahan air dan rayap. Sangat cocok untuk lantai outdoor.',
+                image: 'https://images.unsplash.com/photo-1589216532372-1c2a367900d9?w=400&h=300&fit=crop',
+                badge: '',
+                density: 850,
+                sizes: [
+                    { name: '4x6x4m', price: 138000, isi: 104, kegunaan: 'Rangka kuat' },
+                    { name: '5x10x4m', price: 330000, isi: 50, kegunaan: 'Balok' }
+                ],
+                priceM3: { min: 8400000, max: 14400000 }
+            },
+            {
+                id: 'ulin',
+                emoji: '🪵',
+                name: 'Kayu Ulin (Kayu Besi)',
+                desc: 'Kayu terkuat, tahan air dan rayap. Ideal untuk konstruksi berat dan outdoor.',
+                image: 'https://disperkimtan.palangkaraya.go.id/wp-content/uploads/sites/34/2021/05/POHON-KAYU-ULIN-Eusideroxylon-zwageri-Teijsm-Binn-3.jpg',
+                badge: 'SUPER KUAT',
+                density: 1100,
+                sizes: [
+                    { name: '5x10x4m', price: 480000, isi: 50, kegunaan: 'Tiang' },
+                    { name: '6x12x4m', price: 780000, isi: 35, kegunaan: 'Struktur berat' }
+                ],
+                priceM3: { min: 12000000, max: 18000000 }
+            },
+            {
+                id: 'nantu',
+                emoji: '🌿',
+                name: 'Kayu Nantu',
+                desc: 'Kayu lokal Sulawesi Utara. Kualitas baik untuk konstruksi rumah.',
+                image: 'https://images.unsplash.com/photo-1518495973542-4542c196a121?w=400&h=300&fit=crop',
+                badge: '',
+                density: 600,
+                priceM3: 1920000,
+                sizes: [
+                    { name: '4x6x4m', price: 17000, isi: 104, kegunaan: 'Rangka rumah' }
+                ]
+            },
+            {
+                id: 'gomu',
+                emoji: '🌲',
+                name: 'Kayu Gomu',
+                desc: 'Kayu lokal dengan kekuatan sedang. Cocok untuk rangka rumah.',
+                image: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?w=400&h=300&fit=crop',
+                badge: '',
+                density: 580,
+                priceM3: 1920000,
+                sizes: [
+                    { name: '4x6x4m', price: 17000, isi: 104, kegunaan: 'Rangka rumah' }
+                ]
+            },
+            {
+                id: 'ball',
+                emoji: '🪵',
+                name: 'Kayu Ball',
+                desc: 'Kayu ekonomis untuk proyek konstruksi dengan budget terbatas.',
+                image: 'https://images.unsplash.com/photo-1543443258-92b04ad5ec6f?w=400&h=300&fit=crop',
+                badge: 'EKONOMIS',
+                density: 500,
+                priceM3: 1560000,
+                sizes: []
+            },
+            {
+                id: 'wakan',
+                emoji: '🌳',
+                name: 'Kayu Wakan',
+                desc: 'Kayu lokal Sulawesi Utara populer. Konstruksi rumah tradisional.',
+                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop',
+                badge: 'POPULER',
+                density: 750,
+                h3: true,
+                priceM3: 2160000,
+                sizes: [
+                    { name: '4x6x4m', price: 17000, isi: 104, kegunaan: 'Rangka rumah' }
+                ]
+            },
+            {
+                id: 'putih',
+                emoji: '🌿',
+                name: 'Kayu Putih (Albizia)',
+                desc: 'Kayu putih ringan. Cocok untuk furniture dan konstruksi ringan.',
+                image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400&h=300&fit=crop',
+                badge: '',
+                density: 450,
+                priceM3: 1800000,
+                sizes: []
+            },
+            {
+                id: 'kenanga',
+                emoji: '🌸',
+                name: 'Kayu Kenanga (Cananga)',
+                desc: 'Kayu wangi alami. Cocok untuk furniture aromatik dan dekorasi.',
+                image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=400&h=300&fit=crop',
+                badge: 'WANGI',
+                density: 520,
+                priceM3: 1800000,
+                sizes: []
+            }
+        ];
+
+        // State untuk checkout
+        let currentProduct = null;
+        let currentSize = null;
+        let selectedShippingType = 'pickup';
+        let selectedShippingRate = 6000;
+        let selectedPaymentMethod = 'transfer';
+        let isFirstOrder = false;
+        let isVip = false;
+
+        // Render produk
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = products.map(p => {
+                const hasSizes = p.sizes && p.sizes.length > 0;
+                const priceDisplay = hasSizes 
+                    ? `<div class="price-display" id="price-${p.id}">
+                        <div class="label">Klik ukuran di bawah untuk melihat harga</div>
+                        <div class="value">Rp 0</div>
+                        <div class="detail">-</div>
+                       </div>`
+                    : `<div class="price-display">
+                        <div class="label">Harga per meter kubik:</div>
+                        <div class="value">Rp ${p.priceM3.toLocaleString('id-ID')} / m³</div>
+                        <div class="detail">Berat: ~${p.density} kg/m³</div>
+                       </div>`;
+
+                const sizeSelector = hasSizes
+                    ? `<div class="size-selector">
+                        <label><i class="fas fa-ruler-combined"></i> Pilih Ukuran (klik untuk harga):</label>
+                        <div class="size-options" id="sizes-${p.id}">
+                            ${p.sizes.map((s, idx) => `
+                                <button class="size-btn" onclick="selectSize('${p.id}', ${idx})">
+                                    <span class="size-name">${s.name}</span>
+                                    <span class="size-price">Rp ${(s.price/1000).toFixed(0)}rb</span>
+                                </button>
+                            `).join('')}
+                            <button class="size-btn" style="border-color: #3b82f6; color: #3b82f6;" onclick="requestCustomSize('${p.id}')">
+                                <span class="size-name"><i class="fas fa-plus-circle"></i></span>
+                                <span class="size-price">Req Ukuran</span>
+                            </button>
+                        </div>
+                       </div>`
+                    : `<div class="size-selector">
+                        <label><i class="fas fa-ruler-combined"></i> Ukuran:</label>
+                        <div class="size-options" id="sizes-${p.id}">
+                            <button class="size-btn" style="border-color: #3b82f6; color: #3b82f6;" onclick="requestCustomSize('${p.id}')">
+                                <span class="size-name"><i class="fas fa-plus-circle"></i></span>
+                                <span class="size-price">Req Ukuran</span>
+                            </button>
+                        </div>
+                       </div>`;
+
+                const h3Notice = p.h3 ? `<div class="h3-notice"><i class="fas fa-clock"></i> Pesan H-3 untuk persiapan pengiriman</div>` : '';
+
+                return `
+                    <div class="product-card">
+                        ${p.badge ? `<span class="product-badge ${p.badge === 'PREMIUM' || p.badge === 'SUPER KUAT' ? 'premium' : p.badge === 'LOKAL SULUT' ? 'local' : ''}">${p.badge}</span>` : ''}
+                        <img src="${p.image}" alt="${p.name}" class="product-image">
+                        <div class="product-body">
+                            <div class="product-name">
+                                <span class="product-emoji">${p.emoji}</span> ${p.name}
+                            </div>
+                            <div class="product-desc">${p.desc}</div>
+                            ${sizeSelector}
+                            ${priceDisplay}
+                            ${h3Notice}
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="openCheckout('${p.id}')">
+                                    <i class="fas fa-shopping-cart"></i> Beli
+                                </button>
+                                <button class="btn btn-outline" onclick="showGuide('${p.id}')">
+                                    <i class="fas fa-info-circle"></i> Detail
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Pilih ukuran
+        function selectSize(productId, sizeIndex) {
+            var product = null;
+            for (var i = 0; i < products.length; i++) {
+                if (products[i].id === productId) {
+                    product = products[i];
+                    break;
+                }
+            }
+            if (!product || !product.sizes[sizeIndex]) return;
+
+            // Update active state
+            var btnContainer = document.getElementById('sizes-' + productId);
+            var buttons = btnContainer.querySelectorAll('.size-btn');
+            for (var j = 0; j < buttons.length; j++) {
+                if (j === sizeIndex) {
+                    buttons[j].classList.add('active');
+                } else {
+                    buttons[j].classList.remove('active');
+                }
+            }
+
+            var size = product.sizes[sizeIndex];
+            var volPerBtg = 1 / size.isi;
+            var weightPerBtg = volPerBtg * product.density;
+            var pricePerKg = size.price / weightPerBtg;
+
+            // Update price display
+            var priceDisplay = document.getElementById('price-' + productId);
+            priceDisplay.innerHTML = '<div class="label">' + size.name + ' - ' + size.kegunaan + '</div>' +
+                '<div class="value">Rp ' + size.price.toLocaleString('id-ID') + ' / batang</div>' +
+                '<div class="detail">Isi: ' + size.isi + ' btg/m³ | Berat: ~' + weightPerBtg.toFixed(1) + ' kg/btg | ' +
+                'Est. harga/kg kayu: Rp ' + Math.round(pricePerKg).toLocaleString('id-ID') + '</div>';
+
+            // Save selection
+            product.selectedSizeIndex = sizeIndex;
+        }
+
+        // Buka checkout
+        function openCheckout(productId) {
+            // Find product using for loop (compatible)
+            var product = null;
+            for (var i = 0; i < products.length; i++) {
+                if (products[i].id === productId) {
+                    product = products[i];
+                    break;
+                }
+            }
+            if (!product) return;
+
+            currentProduct = product;
+
+            // Check if sizes exist
+            if (product.sizes && product.sizes.length > 0) {
+                // Select first size as default
+                selectSize(productId, 0);
+                currentSize = product.sizes[0];
+            } else {
+                currentSize = null;
+            }
+
+            document.getElementById('productName').value = product.name;
+            document.getElementById('selectedSize').value = currentSize ? currentSize.name : 'Per m³';
+            document.getElementById('checkoutModal').style.display = 'flex';
+
+            // Reset form
+            document.getElementById('quantity').value = currentSize ? 10 : 1;
+            document.getElementById('distance').value = 1;
+
+            // Calculate total
+            calculateTotal();
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').style.display = 'none';
+        }
+
+        function selectShipping(element, type, rate) {
+            document.querySelectorAll('.shipping-option').forEach(function(el) { el.classList.remove('active'); });
+            element.classList.add('active');
+            selectedShippingType = type;
+            selectedShippingRate = rate;
+            calculateTotal();
+        }
+
+        function selectPayment(element, method) {
+            document.querySelectorAll('.payment-method-option').forEach(function(el) { el.classList.remove('active'); });
+            element.classList.add('active');
+            selectedPaymentMethod = method;
+
+            const transferInfo = document.getElementById('transferInfo');
+            if (method === 'cod') {
+                transferInfo.innerHTML = `
+                    <div style="font-weight: 700; color: #3b82f6; margin-bottom: 0.5rem;">
+                        <i class="fas fa-hand-holding-usd"></i> COD (Bayar Ditempat)
+                    </div>
+                    <div style="color: #1e40af; font-size: 0.95rem;">
+                        DP 50% transfer ke BCA 7800435531 a/n Randi Mirah<br>
+                        Sisa 50% dibayar saat kayu sampai di tujuan
+                    </div>
+                `;
+            } else {
+                transferInfo.innerHTML = `
+                    <div style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem;">
+                        <i class="fas fa-university"></i> Transfer ke:
+                    </div>
+                    <div style="font-family: 'Courier New', monospace; font-size: 1.1rem; font-weight: 700;">BCA 7800435531</div>
+                    <div style="color: #6b7280; font-size: 0.9rem;">a/n Randi Mirah</div>
+                `;
+            }
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            // Get quantity
+            var qtyInput = document.getElementById('quantity');
+            var qty = parseFloat(qtyInput.value) || 1;
+
+            // Get price per unit
+            var pricePerUnit = 0;
+
+            if (currentSize && currentSize.price > 0) {
+                // Per batang
+                pricePerUnit = currentSize.price;
+            } else if (currentProduct && currentProduct.priceM3 > 0) {
+                // Per m3
+                pricePerUnit = currentProduct.priceM3;
+            }
+
+            // Calculate totals - flat rate (1 day)
+            var productTotal = pricePerUnit * qty;
+            var shippingTotal = selectedShippingRate; // Flat daily rate
+            var grandTotal = productTotal + shippingTotal;
+
+            // Calculate COD amounts
+            var dpAmount = grandTotal * 0.5;
+            var codBalance = grandTotal - dpAmount;
+
+            // Update DOM elements
+            var productTotalEl = document.getElementById('productTotal');
+            var shippingTotalEl = document.getElementById('shippingTotal');
+            var grandTotalEl = document.getElementById('grandTotal');
+            var dpAmountEl = document.getElementById('dpAmount');
+            var codBalanceEl = document.getElementById('codBalance');
+            var dpRow = document.getElementById('dpRow');
+            var codBalanceRow = document.getElementById('codBalanceRow');
+
+            if (productTotalEl) productTotalEl.textContent = 'Rp ' + productTotal.toLocaleString('id-ID');
+            if (shippingTotalEl) shippingTotalEl.textContent = 'Rp ' + shippingTotal.toLocaleString('id-ID');
+            if (grandTotalEl) grandTotalEl.textContent = 'Rp ' + grandTotal.toLocaleString('id-ID');
+
+            // Show/hide COD rows
+            if (selectedPaymentMethod === 'cod') {
+                if (dpRow) dpRow.style.display = 'flex';
+                if (codBalanceRow) codBalanceRow.style.display = 'flex';
+                if (dpAmountEl) dpAmountEl.textContent = 'Rp ' + dpAmount.toLocaleString('id-ID');
+                if (codBalanceEl) codBalanceEl.textContent = 'Rp ' + codBalance.toLocaleString('id-ID');
+            } else {
+                if (dpRow) dpRow.style.display = 'none';
+                if (codBalanceRow) codBalanceRow.style.display = 'none';
+            }
+        }
+
+        function submitOrder() {
+            var name = document.getElementById('customerName').value;
+            var phone = document.getElementById('customerPhone').value;
+            var address = document.getElementById('customerAddress').value;
+            var qty = document.getElementById('quantity').value;
+            var sizeName = document.getElementById('selectedSize').value;
+            var total = document.getElementById('grandTotal').textContent;
+
+            if (!name || !phone || !address) {
+                alert('Mohon lengkapi semua data pemesanan (Nama, WA, Alamat)!');
+                return false;
+            }
+
+            var shippingText = '';
+            if (selectedShippingType === 'selfpickup') shippingText = 'Self Pickup (Gratis)';
+            else if (selectedShippingType === 'pickup') shippingText = 'Mobil Pickup (Rp 350.000)';
+            else if (selectedShippingType === 'truck') shippingText = 'Truck Engkel (Rp 750.000)';
+            else if (selectedShippingType === 'kapal') shippingText = 'Charter Kapal (Rp 2.500.000)';
+
+            var paymentText = '';
+            if (selectedPaymentMethod === 'transfer') paymentText = 'Transfer BCA 7800435531 a/n Randi Mirah';
+            else if (selectedPaymentMethod === 'cod') paymentText = 'COD - DP 50% + sisa saat terima';
+
+            var unitType = currentSize ? 'batang' : 'm3';
+
+            // Build message with proper line breaks (%0A) [^76^]
+            var lines = [
+                '*PESANAN MIRAH WOOD\'S*',
+                '',
+                '*Produk:* ' + currentProduct.name,
+                '*Ukuran:* ' + sizeName,
+                '*Jumlah:* ' + qty + ' ' + unitType,
+                '',
+                '*Pengiriman:* ' + shippingText,
+                '*Pembayaran:* ' + paymentText,
+                '',
+                '*Data Pemesan:*',
+                'Nama: ' + name,
+                'No. WA: ' + phone,
+                'Alamat: ' + address,
+                '',
+                '*Total Bayar:* ' + total
+            ];
+
+            // Add DP info for COD
+            if (selectedPaymentMethod === 'cod') {
+                var dpEl = document.getElementById('dpAmount');
+                if (dpEl) {
+                    lines.push('');
+                    lines.push('*DP 50%:* ' + dpEl.textContent);
+                }
+            }
+
+            lines.push('');
+            lines.push('Mohon konfirmasi ketersediaan stok. Terima kasih!');
+
+            // Join with %0A for WhatsApp line breaks
+            var message = lines.join('%0A');
+
+            // Build WhatsApp URL
+            var waUrl = 'https://api.whatsapp.com/send?phone=6285708081999&text=' + message;
+
+            // Open WhatsApp
+            window.open(waUrl, '_blank');
+
+            return true;
+        }
+
+        // Request ukuran custom via WhatsApp
+        function requestCustomSize(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const message = `Halo Admin Mirah Wood's,%0A%0A` +
+                `Saya ingin memesan *${product.name}* dengan ukuran custom.%0A%0A` +
+                `Mohon info:%0A` +
+                `- Apakah tersedia ukuran selain yang di web?%0A` +
+                `- Harga untuk ukuran custom?%0A` +
+                `- Estimasi waktu pengerjaan?%0A%0A` +
+                `Terima kasih!`;
+
+            window.open(`https://wa.me/6285708081999?text=${message}`, '_blank');
+        }
+
+        function showGuide(productId) {
+            const guides = {
+                'meranti': '🪵 Kayu Meranti: Reng atap, usuk, kaso, bekisting. Harga ekonomis Rp3-7jt/m³.',
+                'kamper': '🌲 Kayu Kamper: Wangi alami, anti rayap. Kusen, rangka atap, balok. Rp4-8jt/m³.',
+                'sengon': '🌿 Kayu Sengon: Ringan & murah. Reng, usuk, packing. Rp800rb-1,5jt/m³.',
+                'kelapa': '🌴 Kayu Kelapa: Lokal Sulut. Tahan cuaca. Rangka rumah, gazebo. Rp2-4jt/m³.',
+                'mahoni': '🪑 Kayu Mahoni: Furniture premium. Lemari, meja, interior. Rp4-7jt/m³.',
+                'jati': '👑 Kayu Jati: Premium, tahan rayap >50th. Furniture, kusen. Rp8-15jt/m³. Pesan H-3.',
+                'merbau': '🌳 Kayu Merbau: Kekuatan ekstrim. Lantai outdoor, dermaga. Rp7-12jt/m³.',
+                'ulin': '🪵 Kayu Ulin: Kayu besi. Jembatan, tiang, struktur berat. Rp10-15jt+/m³.',
+                'nantu': '🌿 Kayu Nantu: Lokal Sulut. Konstruksi rumah. Rp1,6jt/m³.',
+                'gomu': '🌲 Kayu Gomu: Lokal Sulut. Rangka rumah. Rp1,6jt/m³.',
+                'ball': '🪵 Kayu Ball: Ekonomis Sulut. Proyek budget. Rp1,3jt/m³.',
+                'wakan': '🌳 Kayu Wakan: Lokal Sulut populer. Tradisional. Rp1,8jt/m³. Pesan H-3.',
+                'putih': '🌿 Kayu Putih: Ringan (Albizia). Furniture. Rp1,5jt/m³.',
+                'kenanga': '🌸 Kayu Kenanga: Wangi alami (Cananga). Furniture aromatik. Rp1,5jt/m³.'
+            };
+            alert(guides[productId] || 'Informasi detail kayu ini akan segera tersedia.');
+        }
+
+        // Close modal on outside click
+        document.getElementById('checkoutModal').addEventListener('click', function(e) {
+            if (e.target === this) closeCheckout();
+        });
+
+        // Initialize
+        renderProducts();
+    </script>
+
+</body>
+</html>
